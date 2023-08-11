@@ -7,7 +7,7 @@ import {
 } from 'typeorm';
 import { Seatmap } from './Seatmap';
 
-@Entity({ name: 'seat', schema: 'event booking' })
+@Entity({ name: 'seat', schema: 'eventbooking' })
 export class Seat {
   @PrimaryGeneratedColumn('uuid')
   id: string;

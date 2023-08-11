@@ -10,7 +10,7 @@ import { Event } from './Event';
 import { Seat } from './Seat';
 import { Customer } from './Customer';
 
-@Entity({ name: 'ticket', schema: 'event booking' })
+@Entity({ name: 'ticket', schema: 'eventbooking' })
 export class Ticket {
   @PrimaryGeneratedColumn('uuid')
   id: string;

@@ -8,16 +8,20 @@ import { Seat } from './typeorm/entities/Seat';
 import { Ticket } from './typeorm/entities/Ticket';
 import { Seatmap } from './typeorm/entities/Seatmap';
 import { EventsBookingModule } from './events_booking/events_booking.module';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
+    ConfigModule.forRoot({
+      envFilePath: 'config.env',
+    }),
     TypeOrmModule.forRoot({
-      type: 'mysql',
-      host: process.env.DB_HOSTNAME,
+      type: 'postgres',
+      host: process.env.DB_HOST,
       port: parseInt(process.env.DB_PORT),
       username: process.env.DB_USERNAME,
       password: process.env.DB_PASSWORD,
-      database: process.env.DB_NAME,
+      database: process.env.DB_DBNAME,
       entities: [Event, Customer, Seat, Ticket, Seatmap],
       synchronize: true,
     }),

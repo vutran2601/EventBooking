@@ -1,7 +1,7 @@
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 import { Ticket } from './Ticket';
 
-@Entity({ name: 'customer', schema: 'event booking' })
+@Entity({ name: 'customer', schema: 'eventbooking' })
 export class Customer {
   @PrimaryGeneratedColumn('uuid')
   id: string;
