@@ -1,7 +1,7 @@
 import { Controller, Get, Post, Put, Body, Query, Param } from '@nestjs/common';
-import { CreateEventDto } from '@src/events_booking/dto/CreateEvent.dto';
-import { EventsService } from '@src/events_booking/service/events/events.service';
-import { SeatsService } from '@src/events_booking/service/seats/seats.service';
+import { CreateEventDto } from 'src/events_booking/dto/CreateEvent.dto';
+import { EventsService } from 'src/events_booking/service/events/events.service';
+import { SeatsService } from 'src/events_booking/service/seats/seats.service';
 import { UploadedFile, UseInterceptors } from '@nestjs/common/decorators';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { CloudinaryService } from 'src/cloudinary/Cloudinary.service';
