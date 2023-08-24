@@ -10,12 +10,12 @@ import { join } from 'path';
       transport: {
         host: 'smtp.gmail.com',
         auth: {
-          user: 'an.nguyen.tdn@gmail.com',
-          pass: 'brkbglbkcwsbehme',
+          user: process.env.EMAIL_ADDRESS,
+          pass: process.env.EMAIL_PASSWORD,
         },
       },
       defaults: {
-        from: 'an.nguyen.tdn@gmail.com',
+        from: process.env.EMAIL_ADDRESS,
       },
       template: {
         dir: join(__dirname, 'templates'),
