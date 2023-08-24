@@ -3,7 +3,10 @@ import { v2 as cloudinary } from 'cloudinary';
 export const CloudinaryProvider = {
   provide: 'CLOUDINARY',
   useFactory: () => {
-    const cloudinaryUrl = 'cloudinary://421689936168269:lcvvRiJqHBzGszet-aRj2ARUqPY@dzqnimtzx';
+    const cloudinaryUrl = process.env.CLOUDINARY_URL;
+    if (!cloudinaryUrl) {
+      throw new Error('CLOUDINARY_URL environment variable is not set.');
+    }
     return cloudinary.config(cloudinaryUrl);
   },
 };
