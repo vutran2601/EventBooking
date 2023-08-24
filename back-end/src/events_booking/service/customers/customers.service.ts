@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { Customer } from 'src/typeorm/entities/Customer';
+import { Customer } from '../../../typeorm/entities/Customer'
 
 interface CustomerInfo {
   fullName: string;
