@@ -1,10 +1,10 @@
 import { Controller, Get, Post, Body, Param } from '@nestjs/common';
-import { TicketsService } from 'src/events_booking/service/tickets/tickets.service';
-import { CreateTicketDto } from 'src/events_booking/dto/CreateTicket.dto';
-import { SeatsService } from 'src/events_booking/service/seats/seats.service';
-import { EventsService } from 'src/events_booking/service/events/events.service';
-import { CustomersService } from 'src/events_booking/service/customers/customers.service';
-import { EmailService } from 'src/email/email.service';
+import { TicketsService } from '../../service/tickets/tickets.service';
+import { CreateTicketDto } from '../../dto/CreateTicket.dto';
+import { SeatsService } from '../../service/seats/seats.service';
+import { EventsService } from '../../service/events/events.service';
+import { CustomersService } from '../../service/customers/customers.service';
+import { EmailService } from '../../../email/email.service';
 
 @Controller('tickets')
 export class TicketsController {

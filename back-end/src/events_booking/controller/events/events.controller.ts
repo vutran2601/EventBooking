@@ -4,7 +4,7 @@ import { EventsService } from '../../service/events/events.service';
 import { SeatsService } from '../../service/seats/seats.service';
 import { UploadedFile, UseInterceptors } from '@nestjs/common/decorators';
 import { FileInterceptor } from '@nestjs/platform-express';
-import { CloudinaryService } from 'src/cloudinary/Cloudinary.service';
+import { CloudinaryService } from '../../../cloudinary/Cloudinary.service';
 
 @Controller('events')
 export class EventsController {
