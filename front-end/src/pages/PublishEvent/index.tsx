@@ -51,7 +51,7 @@ const handleSearchAllEvent = async (keyword: string) => {
 
 const handlePublishEvent = async (id: string, setLoading: any, setEventList: any) => {
     setLoading(true);
-    await axios.put('https://event-booking-backend.vercel.app/events/update_status/${id}');
+    await axios.put(`https://event-booking-backend.vercel.app/events/update_status/${id}`);
     setTimeout(async () => {
         const updatedEventList = await handleGetAllEvents()
         setEventList(updatedEventList)
