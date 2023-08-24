@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Event } from 'src/typeorm/entities/Event';
-import { Seatmap } from 'src/typeorm/entities/Seatmap';
+import { Event } from '../../../typeorm/entities/Event';
+import { Seatmap } from '../../../typeorm/entities/Seatmap';
 import { Repository } from 'typeorm';
 import { CreateEventDto } from '../../dto/CreateEvent.dto';
 

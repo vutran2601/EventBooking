@@ -8,17 +8,17 @@ import { EventsController } from './controller/events/events.controller';
 import { EventsService } from './service/events/events.service';
 import { SeatsService } from './service/seats/seats.service';
 import { CloudinaryModule } from 'src/cloudinary/Cloudinary.module';
-import { EmailModule } from 'src/email/email.module';
+import { EmailModule } from '../email/email.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Event } from 'src/typeorm/entities/Event';
-import { Seat } from 'src/typeorm/entities/Seat';
-import { Seatmap } from 'src/typeorm/entities/Seatmap';
-import { Ticket } from 'src/typeorm/entities/Ticket';
-import { Customer } from 'src/typeorm/entities/Customer';
+import { Event } from '../typeorm/entities/Event';
+import { Seat } from '../typeorm/entities/Seat';
+import { Seatmap } from '../typeorm/entities/Seatmap';
+import { Ticket } from '../typeorm/entities/Ticket';
+import { Customer } from '../typeorm/entities/Customer';
 import { TicketsController } from './controller/tickets/tickets.controller';
 import { TicketsService } from './service/tickets/tickets.service';
 import { CustomersService } from './service/customers/customers.service';
-import { EmailValidationMiddleware } from 'src/middleware/emailValidation.middleware';
+import { EmailValidationMiddleware } from '../middleware/emailValidation.middleware';
 
 @Module({
   imports: [

@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { Ticket } from 'src/typeorm/entities/Ticket';
-import { Seat } from 'src/typeorm/entities/Seat';
-import { Event } from 'src/typeorm/entities/Event';
-import { Customer } from 'src/typeorm/entities/Customer';
+import { Ticket } from '../../../typeorm/entities/Ticket';
+import { Seat } from '../../../typeorm/entities/Seat';
+import { Event } from '../../../typeorm/entities/Event';
+import { Customer } from '../../../typeorm/entities/Customer';
 import { EventsService } from '../events/events.service';
 import { SeatsService } from '../seats/seats.service';
 
