@@ -36,12 +36,12 @@ type Type_EventItem = {
 };
 
 const handleGetAllEvents = async () => {
-    const response = await axios.get('http://localhost:3000/events');
+    const response = await axios.get('https://event-booking-backend.vercel.app/events');
     return response.data;
 };
 
 const handleSearchAllEvent = async (keyword: string) => {
-    const response = await axios.get('http://localhost:3000/events/search', {
+    const response = await axios.get('https://event-booking-backend.vercel.app/events/search', {
         params: {
             query: keyword,
         },
@@ -51,7 +51,7 @@ const handleSearchAllEvent = async (keyword: string) => {
 
 const handlePublishEvent = async (id: string, setLoading: any, setEventList: any) => {
     setLoading(true);
-    await axios.put(`http://localhost:3000/events/update_status/${id}`);
+    await axios.put('https://event-booking-backend.vercel.app/events/update_status/${id}');
     setTimeout(async () => {
         const updatedEventList = await handleGetAllEvents()
         setEventList(updatedEventList)

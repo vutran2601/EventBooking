@@ -3,7 +3,6 @@ import { Routes, Route } from "react-router-dom";
 import LandingPage from "../pages/LandingPage";
 import CreateEvent from "../pages/CreateEvent";
 import EventDetail from "../pages/EventDetail";
-import EventBookingPage from "../pages/EventBookingPage";
 import PublishEvent from "../pages/PublishEvent";
 import MyTicket from "../pages/MyTicket";
 
@@ -14,7 +13,6 @@ const routes = [
     { 'name': 'Create Event', 'path': '/create_event', 'component': CreateEvent },
     { 'name': 'Publish Event', 'path': '/publish_event', 'component': PublishEvent },
     { 'path': '/event_detail/:id', 'component': EventDetail },
-    { 'path': '/event_booking', 'component': EventBookingPage }
 ]
 
 const PublicRoutes = (props: any) => {

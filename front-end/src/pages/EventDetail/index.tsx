@@ -35,7 +35,7 @@ type Seat = {
 
 const getSeatMap = async (seatMapId: string) => {
     const response = await axios.get(
-        `http://localhost:3000/events/seatmap/${seatMapId}`
+        'https://event-booking-backend.vercel.app/events/seatmap/${seatMapId}'
     );
     return response.data;
 };
@@ -51,7 +51,7 @@ const handleBookingTicket = async (formData: any, seatMapId: string) => {
         });
     try {
         const response = await axios.post(
-            'http://localhost:3000/tickets/create_ticket',
+            'https://event-booking-backend.vercel.app/tickets/create_ticket',
             {
                 ...formData,
                 seats_id: allSeatId,

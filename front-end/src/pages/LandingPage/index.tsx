@@ -33,14 +33,14 @@ type Type_EventItem = {
 };
 
 const handleGetPublishedEvents = async () => {
-    const response = await axios.get('http://localhost:3000/events');
+    const response = await axios.get('https://event-booking-backend.vercel.app/events');
     return response.data.filter((event: any) => {
         return event.status === 'published'
     });
 };
 
 const handleSearchPublishedEvent = async (keyword: string) => {
-    const response = await axios.get('http://localhost:3000/events/search', {
+    const response = await axios.get('https://event-booking-backend.vercel.app/events/search', {
         params: {
             query: keyword,
         },
