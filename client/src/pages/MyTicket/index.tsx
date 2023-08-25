@@ -24,7 +24,7 @@ const handleGetUserTickets = async (keyword: string, setLoading: any, setTicketL
     console.warn(keyword)
     setLoading(true)
     try {
-        const response = await axios.get(`https://event-booking-backend.vercel.app/tickets/user_tickets/${keyword}`)
+        const response = await axios.get(`https://event-booking-server.vercel.app/tickets/user_tickets/${keyword}`)
         setTicketList(response.data)
     } catch (err) {
         console.error(err)

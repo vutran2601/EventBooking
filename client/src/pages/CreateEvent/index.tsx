@@ -24,7 +24,7 @@ import axios from 'axios';
 const handleCreateEvent = async (formData: any, setLoading: any, setAlert: any, setFormData: any) => {
     try {
         setLoading(true)
-        await axios.post('https://event-booking-backend.vercel.app/events/create_event', {
+        await axios.post('https://event-booking-server.vercel.app/events/create_event', {
             title: formData.eventtitle,
             eventType: formData.eventtype,
             location: formData.location,
