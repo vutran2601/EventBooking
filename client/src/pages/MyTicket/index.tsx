@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import {
     Box,
     TextField,
@@ -14,9 +13,7 @@ import {
     faCalendarDays,
     faFilm,
     faLocationDot,
-    faMagnifyingGlass,
-    faMoneyCheckDollar,
-    faDollarSign
+    faMagnifyingGlass
 } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 

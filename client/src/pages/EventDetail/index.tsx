@@ -59,7 +59,7 @@ const handleBookingTicket = async (formData: any, seatMapId: string) => {
         );
         return response.status;
     } catch (err: any) {
-        return err.response.status;
+        return err.response;
     }
 };
 
@@ -142,7 +142,7 @@ const EventBooking = (props: any) => {
             props.seatSelectedArray.vip.length * price.vip +
             props.seatSelectedArray.sweetbox.length * price.sweetbox;
         setTotalCost(totalCost);
-    }, [props.seatSelectedArray]);
+    }, [props.seatSelectedArray, formData]);
 
     return (
         <Box
@@ -633,7 +633,7 @@ const SeatMapAnnotation = () => {
     );
 };
 
-const Seat = (props: Seat) => {
+const SeatItem = (props: Seat) => {
     const [selected, setSelected] = useState(false);
     let color;
     if (props.seatPos <= 20) color = '#ffea00';
@@ -731,7 +731,7 @@ const SeatMap = (props: any) => {
                 });
             setSelectedSeat(selectedSeat);
         });
-    }, []);
+    }, [location.state.event.seatmap.id]);
 
     return (
         <Box
@@ -769,7 +769,7 @@ const SeatMap = (props: any) => {
             >
                 {arraySeat.map((seat, index) => {
                     return (
-                        <Seat
+                        <SeatItem
                             key={index}
                             seatPos={seat}
                             selected={
