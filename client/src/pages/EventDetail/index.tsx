@@ -142,7 +142,7 @@ const EventBooking = (props: any) => {
             props.seatSelectedArray.vip.length * price.vip +
             props.seatSelectedArray.sweetbox.length * price.sweetbox;
         setTotalCost(totalCost);
-    }, [props.seatSelectedArray, formData]);
+    }, [props.seatSelectedArray, formData, location.state.event.price]);
 
     return (
         <Box
