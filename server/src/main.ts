@@ -2,12 +2,7 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
-  app.enableCors({
-    origin: '*', // The origin that is allowed to access the resource
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // The methods allowed when accessing the resource
-    allowedHeaders: 'Content-Type, Accept', // The headers that can be used when making the actual request
-  });  
+  const app = await NestFactory.create(AppModule, { cors: true });
   await app.listen(3000);
 }
 bootstrap();
