@@ -13,7 +13,7 @@ export class EmailService {
   async sendUserConfirmation(user: User, userId: string) {
     await this.mailerService.sendMail({
       to: user.email,
-      subject: 'Welcome to our Booking App! Booking confirmation code',
+      subject: 'Thank you for your booking!',
       template: './confirmation',
       context: {
         name: user.fullName,
