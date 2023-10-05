@@ -35,7 +35,7 @@ export class Event {
   @Column()
   createTime: Date;
 
-  @Column({ default: 'unpublish' })
+  @Column({ default: 'unpublished' })
   status: string;
 
   @OneToOne(() => Seatmap)
