@@ -36,8 +36,12 @@ type Type_EventItem = {
 };
 
 const handleGetAllEvents = async () => {
-    const response = await axios.get(`${process.env.REACT_APP_API_URL}/events`);
-    return response.data;
+    try {
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/events`);
+        return response.data;
+    } catch (err) {
+        console.log(err)
+    }
 };
 
 const handleSearchAllEvent = async (keyword: string) => {
